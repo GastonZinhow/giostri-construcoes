@@ -1,5 +1,5 @@
 package GiostriConstrucoes.dev.config;
-
+//Muitos imports sem usar
 import GiostriConstrucoes.dev.model.Usuario;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -19,6 +19,7 @@ public class TokenService {
     @Value("${api.security.token.secret}")
     private String secret;
 
+    //Este método generateToken tem a expiração do token com um valor fixo diretamente no código, e geralmente o ideal é usar constantes.
     public String generateToken(Usuario usuario) {
         Algorithm algorithm = Algorithm.HMAC256(secret);
 

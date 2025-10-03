@@ -25,6 +25,8 @@ public class SecurityFilter extends OncePerRequestFilter {
     @Autowired
     private UsuarioRepository userRepository;
 
+    //Este método mistura lógica de CORS com autenticação;
+    //e o ideal seria separar a lógica de CORS em um filtro dedicado.
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {

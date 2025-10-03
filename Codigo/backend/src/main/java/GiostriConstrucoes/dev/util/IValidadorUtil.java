@@ -3,6 +3,7 @@ package GiostriConstrucoes.dev.util;
 import java.util.InputMismatchException;
 
 public interface IValidadorUtil {
+    //Este metódo poderia ser substituído por uma biblioteca de validação de CPF como a do Apache Commons.
     default boolean isCPF(String CPF) {
         // considera-se erro CPF's formados por uma sequencia de numeros iguais
         if (CPF.equals("00000000000") || CPF.equals("11111111111") || CPF.equals("22222222222")

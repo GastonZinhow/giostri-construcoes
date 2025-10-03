@@ -20,13 +20,14 @@ import java.util.Map;
 @RequestMapping("/giostri/carrinho")
 @RequiredArgsConstructor
 public class  CarrinhoController {
-
+//Repositórios não estão sendo usados
     private final UsuarioRepository usuarioRepository;
     private final ProdutoRepository produtoRepository;
     private final CarrinhoService carrinhoService;
 
     @PostMapping("/enviar")
     public ResponseEntity<?> enviar(@RequestBody EnvioCarrinhoRequest request) {
+        //Variável não está sendo usada
         Map<String, Object> response = new HashMap<>();
         carrinhoService.adicionarAoCarrinho(request);
         return ResponseEntity.ok().body("Produto adicionado ao carrinho.");
@@ -34,12 +35,14 @@ public class  CarrinhoController {
 
     @GetMapping("/itensCarrinho/{id}")
     public List<ItemDeCarrinhoDTO> itensCarrinho(@PathVariable String id) {
+        //Variável não está sendo usada
         Map<String, Object> response = new HashMap<>();
         return carrinhoService.carrinhoDoUsuario(id);
     }
 
     @PutMapping("/atualizarItem")
     public ResponseEntity<?> atualizarItem(@RequestBody alteracaoCarrinhoDTO request) {
+        //Variável não está sendo usada
         Map<String, Object> response = new HashMap<>();
         carrinhoService.editarQuantidade(request);
         return ResponseEntity.ok().body("Item atualizado com sucesso.");

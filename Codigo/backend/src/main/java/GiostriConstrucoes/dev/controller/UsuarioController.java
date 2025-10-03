@@ -61,6 +61,8 @@ public class UsuarioController extends ControllerCore {
         }
     }
 
+    //Este método registrar tem muitas validações e lógica implementadas diretamente;
+    //o ideal seria mover a lógica de validação para o UsuarioService para seguir o princípio de separação de responsabilidades.
     @PostMapping("/registrar")
     public ResponseEntity<Map<String, Object>> registrar(@RequestBody @Valid UsuarioRegistrarRequest request) {
         Map<String, Object> response = new HashMap<>();

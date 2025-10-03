@@ -23,6 +23,8 @@ public class ItemDeCarrinho extends GerenciavelSimples {
     @Column(name = "quantidade")
     private int quantidade;
 
+    //Este método pode lançar exceções se o preço do produto for nulo;
+    //o ideal seria adicionar uma validação para garantir que o preço não seja nulo.
     public double valorTotal(){
         return quantidade * produto.getPreco();
     }

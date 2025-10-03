@@ -122,6 +122,7 @@ public class PedidoController {
         return ResponseEntity.ok().body("Pedido atualizado com sucesso");
     }
 
+    //Metódo não está sendo usado
     private ResponseEntity<Map<String, Object>> errorResponse(Map<String, Object> response, String message, HttpStatus status) {
         response.put("success", false);
         response.put("message", message);
