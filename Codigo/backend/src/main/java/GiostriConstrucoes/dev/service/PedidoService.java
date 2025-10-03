@@ -43,6 +43,8 @@ public class PedidoService {
     }
     */
 
+    //Este método updateStatus usa try-catch para validar o status e isso pode ser substituído por uma validação explícita;
+    //o ideal seria criar um método que valide se o status é válido antes de atualizar.
     public boolean updateStatus(String id, String status) {
         return pedidoRepository.findById(id).map(pedido -> {
             try {

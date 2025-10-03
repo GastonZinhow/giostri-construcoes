@@ -57,6 +57,7 @@ public class SecurityConfig implements WebMvcConfigurer {
         return new BCryptPasswordEncoder();
     }
 
+    //A configuração de CORS está bem implementada, mas poderia ser movida para uma classe separada para melhorar a organização.
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();

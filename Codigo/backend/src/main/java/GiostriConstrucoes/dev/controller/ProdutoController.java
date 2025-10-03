@@ -83,6 +83,7 @@ public class ProdutoController extends ControllerCore {
         return ResponseEntity.status(HttpStatusCode.valueOf(404)).body("Erro ao atualizar item, produto não encontrado");
     }
 
+    //Metódo não está sendo usado
     private ResponseEntity<Map<String, Object>> errorResponse(Map<String, Object> response, String message) {
         return errorResponse(response, message, HttpStatus.BAD_REQUEST);
     }

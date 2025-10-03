@@ -25,7 +25,8 @@ import java.util.List;
 
 @Component
 public class PdfGenerator {
-
+//O método gerarPdfRelatorioVendas está muito extenso e tem muito codigo repetido,
+//o ideal seria criar métodos auxiliares para modularizar a criação de tabelas e cabeçalhos.
     public byte[] gerarPdfRelatorioVendas(List<Pedido> pedidos) {
         try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
 

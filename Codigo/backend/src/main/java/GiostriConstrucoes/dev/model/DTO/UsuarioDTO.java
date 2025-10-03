@@ -84,6 +84,8 @@ public class UsuarioDTO implements IDataUtil {
         return nome.substring(0, 2).toUpperCase();
     }
 
+    //Este método formatarCPF está diretamente nessa classe de DTO, o que não é ideal,
+    //o ideal seria mover esse método para uma classe utilitária, como CpfUtil.
     private String formatarCPF(String cpf) {
         if (cpf == null) return null;
         cpf = cpf.replaceAll("\\D", ""); // Remove todos os caracteres não numéricos

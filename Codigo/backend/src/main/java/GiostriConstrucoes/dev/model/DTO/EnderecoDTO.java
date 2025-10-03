@@ -64,6 +64,8 @@ public class EnderecoDTO {
                 .build();
     }
 
+    //Este método formatarCEP está diretamente nessa classe de DTO, e
+    //o ideal seria mover para uma classe utilitária como CepUtil.
     private String formatarCEP(String cep) {
         if (cep == null) return null;
         cep = cep.replaceAll("\\D", "");

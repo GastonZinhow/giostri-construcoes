@@ -153,6 +153,8 @@ public class UsuarioService {
         }
     }
 
+    //Este método possui lógica duplicada para validação de senha;
+    //O ideal seria criar um método auxiliar para validar essas senhas e reutilizá-lo em diferentes partes do código.
     public void alterarSenha(UsuarioRedefinirSenhaRequest user) {
         try {
             if (user == null || user.email() == null || user.senha() == null) {

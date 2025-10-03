@@ -21,6 +21,8 @@ public class FavoritosService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    //Os métodos favoritar e desfavoritar possuem lógica repetitiva para buscar usuário e produto;
+    //o ideal seria criar um método auxiliar para buscar e validar a existência de usuário e produto.
     public boolean favoritar(FavoritoRequest request){
         Optional<Usuario> usuario = usuarioRepository.findById(request.usuarioID());
         Optional<Produto> produto = produtoRepository.findById(Long.parseLong(request.produtoID()));

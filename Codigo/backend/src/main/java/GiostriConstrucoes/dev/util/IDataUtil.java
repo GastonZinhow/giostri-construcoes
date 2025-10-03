@@ -6,6 +6,8 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
 
+//Essa interface mistura métodos de conversão de data com lógica de formatação;
+//e o ideal seria separar em duas interfaces: DataConverter e DataFormatter.
 public interface IDataUtil {
 
     default Date toData(String d) {

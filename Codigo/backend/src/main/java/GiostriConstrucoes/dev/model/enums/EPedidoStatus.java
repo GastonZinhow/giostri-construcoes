@@ -7,6 +7,7 @@ public enum EPedidoStatus {
     ENTREGUE("entregue"),
     CANCELADO("cancelado");
 
+    //Esse campo status não é utilizado, e pode ser removido.
     private String status;
 
     EPedidoStatus(String status) {

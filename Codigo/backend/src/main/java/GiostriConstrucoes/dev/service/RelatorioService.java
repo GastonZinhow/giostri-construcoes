@@ -1,3 +1,4 @@
+
 package GiostriConstrucoes.dev.service;
 
 import GiostriConstrucoes.dev.config.PdfGenerator;
@@ -23,6 +24,9 @@ public class RelatorioService {
 
     private PdfGenerator pdfGenerator = new PdfGenerator();
 
+    //Os métodos que geram relatórios chamam diretamente o PdfGenerator
+    //e isso cria um acoplamento forte entre as classes;
+    //o ideal seria usar uma interface para o gerador de PDFs.
     public byte[] gerarRelatorioVendas() {
         List<Pedido> pedidos = pedidoRepository.findAll();
         return pdfGenerator.gerarPdfRelatorioVendas(pedidos);

@@ -40,7 +40,8 @@ public class Produto extends GerenciavelSimples {
     @BatchSize(size = 20)
     private List<Usuario> usuariosQueFavoritaram = new ArrayList<>();
 
-
+    //Os métodos criarProdutoFromDTO e editarProdutoFromDTO estão diretamente na classe Produto,
+    //e o ideal seria mover esses métodos para o ProdutoService para seguir o princípio de responsabilidade única.
     public static Produto criarProdutoFromDTO(ProdutoDTO DTO) {
         Produto produto = new Produto();
 

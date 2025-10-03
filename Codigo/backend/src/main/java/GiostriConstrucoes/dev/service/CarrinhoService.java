@@ -75,6 +75,8 @@ public class CarrinhoService {
                 .orElse(false);
     }
 
+    //Este metódo finalizarCarrinho possui muita lógica em um único método,
+    //o que dificulta a leitura e manutenção, o ideal seria quebrar ele em metódos menores.
     public String finalizarCarrinho(String usuarioId, String taxa, String descricao) {
         return usuarioRepository.findById(usuarioId).map(usuario -> {
             ItemDePedido itemDePedido;

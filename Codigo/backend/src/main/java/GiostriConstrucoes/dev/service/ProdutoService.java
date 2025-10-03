@@ -19,6 +19,8 @@ public class ProdutoService {
         return produtoRepository.findAllAsDTO();
     }
 
+    //Este método faz uso de stream().map(), mas poderia ser mais eficiente se a conversão fosse
+    // feita diretamente na consulta no banco.
     public List<ProdutoDTO> listarProdutosComFavoritos() {
         List<Produto> produtos = produtoRepository.findAllWithFavoritos();
         return produtos.stream()
